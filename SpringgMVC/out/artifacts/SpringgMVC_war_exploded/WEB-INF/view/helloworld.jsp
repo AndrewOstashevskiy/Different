@@ -14,5 +14,9 @@
 Hello World of Spring!!!
 <br><br>
 Student Name: ${param.stName}
+
+<br><br>
+Message: ${message}
+
 </body>
 </html>

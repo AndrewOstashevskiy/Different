@@ -11,8 +11,9 @@
     <title>Hello World -Input Form</title>
 </head>
 <body>
-<form  method="get" action="processForm2">
+<form  method="get" action="processForm3">
     <input type="text" name="stName" placeholder="Name"/>
+    <input type="text" name="familia" placeholder="Famillia">
     <input type="submit">
 </form>
 </body>

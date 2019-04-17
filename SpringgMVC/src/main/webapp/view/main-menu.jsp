@@ -5,8 +5,10 @@
     <title>Document</title>
 </head>
 <body>
-<h2>Help Osseccccccccccccccccccc        s</h2>
-<a href="showForm">Show Form</a>
-<a href="bbb">Show Form</a>
+<h2>HellO</h2>
+<a href="hello/showForm">Show Form</a>
+<br><br>
+
+<a href="student/showForm">Show Form</a>
 </body>
 </html>

@@ -1,16 +1,38 @@
 package com.spring;
 
+import com.spring.validation.PostCode;
+
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.LinkedHashMap;
-import java.util.List;
+
 
 public class Student {
 
-    private String firstName;
-    private String lastName;
-    private String country;
+    @NotNull(message = "Age is required")
+    private Long id;
 
-    private String favLnguage;
+    @NotNull(message = "is required")
+    @Size(min = 1, message = "is required")
+    private String firstName;
+
+    @NotNull(message = "is required")
+    @Size(min = 1, message = "is required")
+    private String lastName;
+
+
+    @PostCode(value = "LVV", message = "must start with LVV")
+    @NotNull(message = "Is required")
+    @Pattern(regexp = "^[A-Z0-9]{7}", message = "only 7 chars/digits")
+    private String postalCode;
+
+    private String country;
+    private String[] skills;
+
+    private String favLanguage;
     private LinkedHashMap<String, String> countryOptions;
+
 
     public Student() {
         countryOptions = new LinkedHashMap<>();
@@ -20,12 +42,14 @@ public class Student {
         countryOptions.put("ARG", "Argentina");
     }
 
-    public String getFavLnguage() {
-        return favLnguage;
+
+
+    public String getFavLanguage() {
+        return favLanguage;
     }
 
-    public void setFavLnguage(String favLnguage) {
-        this.favLnguage = favLnguage;
+    public void setFavLanguage(String favLanguage) {
+        this.favLanguage = favLanguage;
     }
 
     public String getCountry() {
@@ -54,5 +78,39 @@ public class Student {
 
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
+    }
+
+    public String[] getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String[] skills) {
+        this.skills = skills;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
     }
 }

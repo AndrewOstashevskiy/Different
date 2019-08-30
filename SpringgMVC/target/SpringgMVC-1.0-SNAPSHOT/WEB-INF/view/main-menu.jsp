@@ -6,15 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-<h2>Hello User!!!111!1 Welcome</h2>
-<a href="hello/showForm">Show Form</a>
-<br><br>
+<h2>Hello User. Register if you still not.</h2>
 
-<a href="students/showForm">Show student registration form</a>
-<br><br>
-
-<a href="teachers/showFormT">Show teacher registration form</a>
-
+<a href="students/showForm">Login In</a>
 <br><br>
 <%out.println(SpringVersion.getVersion());%>
 

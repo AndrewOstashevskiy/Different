@@ -1,4 +1,4 @@
-package com.spring;
+package com.spring.Entity;
 
 public class Teacher {
     private String name;

@@ -1,10 +1,12 @@
-package com.spring;
+package com.spring.Controllers;
 
+import com.spring.Entity.Student;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +36,7 @@ public class StudentController {
      * @return
      */
 
-    @RequestMapping("/showForm")
+    @GetMapping("/showForm")
     public String showForm(Model model) {
         Student student = new Student();
         model.addAttribute("student", student);

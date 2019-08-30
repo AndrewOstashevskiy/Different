@@ -1,5 +1,6 @@
-package com.spring;
+package com.spring.Controllers;
 
+import com.spring.Entity.Teacher;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
